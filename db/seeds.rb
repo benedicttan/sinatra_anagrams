@@ -1,8 +1,8 @@
 # require_relative "../app/models/word.rb"
 
-# IO.foreach("app/words") do |line|
-#   Word.create(text: line.chomp, text_sorted: line.chomp.downcase.split(//).sort.join)
-# end
+IO.foreach("app/words") do |line|
+  Word.create(text: line.chomp, text_sorted: line.chomp.downcase.split(//).sort.join)
+end
 
 # Word.all.each do |word|
 #   word.text = word.text[0..-2]
@@ -22,7 +22,7 @@
 #   end
 # end
 
-Word.all.each do |word|
-  word.text = word.text.chomp
-  word.save
-end
+# Word.all.each do |word|
+#   word.text = word.text.chomp
+#   word.save
+# end
